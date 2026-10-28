@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondLife AI — Creative Upcycling & Zero Waste Ideas</title>
+    <meta name="description" content="SecondLife AI helps you transform unwanted household items into useful, creative, and decorative treasures with ₹0 budget.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main-form-section" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="#" class="logo-group" aria-label="SecondLife AI Home">
+                <div class="logo-icon">🌱</div>
+                <div class="logo-text">SecondLife <span>AI</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#main-form-section">Suggest Ideas</a></li>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><span class="nav-badge">₹0 Free Stack</span></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="pill-badge">
+                <span>🌱</span> Creative Reuse • 100% Free &amp; Offline
+            </div>
+            <h1 class="hero-title">
+                Give Your Unwanted Items a <span class="highlight">Second Life</span>
+            </h1>
+            <p class="hero-subtitle">
+                Transform everyday household waste, discarded packaging, and old clothing into practical organizers, home decor, and clever storage—without spending a single rupee.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item"><span>💰</span> ₹0 Budget Needed</div>
+                <div class="stat-item"><span>🛡️</span> Built-in Safety Checks</div>
+                <div class="stat-item"><span>⚡</span> Beginner-Friendly</div>
+                <div class="stat-item"><span>🌍</span> Zero Landfill Waste</div>
+            </div>
+
+            <!-- Quick Inspiration Chips -->
+            <div class="quick-picks">
+                <span class="quick-picks-label">Quick test:</span>
+                <button type="button" class="chip-btn" data-item="Glass Jar" data-cat="practical">🫙 Glass Jar</button>
+                <button type="button" class="chip-btn" data-item="Old Denim Jeans" data-cat="practical">👖 Denim Jeans</button>
+                <button type="button" class="chip-btn" data-item="Cardboard Box" data-cat="storage">📦 Cardboard Box</button>
+                <button type="button" class="chip-btn" data-item="Plastic Bottle" data-cat="practical">🧴 Plastic Bottle</button>
+                <button type="button" class="chip-btn" data-item="Tin Can" data-cat="decorative">🥫 Tin Can</button>
+                <button type="button" class="chip-btn" data-item="Wooden Pallet" data-cat="practical">🪵 Wood Scrap</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content & Interactive Form -->
+    <main class="main-content" id="main-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Tell Us What You Want to Upcycle</h2>
+                    <p>Enter your unwanted item, available tools, and budget. Our smart decision engine will suggest safe and creative reuse ideas.</p>
+                </div>
+
+                <form id="reuse-form" novalidate>
+                    <div class="form-grid">
+                        <!-- Item Description Input -->
+                        <div class="form-group">
+                            <label for="item-input" class="form-label">
+                                What item do you have? <span class="required-star">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="item-input" 
+                                class="text-input" 
+                                placeholder="e.g., Glass jar, Old jeans, Amazon delivery box, Plastic soda bottle..." 
+                                required 
+                                autocomplete="off"
+                            >
+                            <span class="error-message" id="item-error">Please describe the item you want to upcycle (at least 2 letters).</span>
+                            <span class="form-hint">Tip: Be descriptive (e.g., "broken mug", "t-shirt", "wine bottle").</span>
+                        </div>
+
+                        <!-- Item Condition -->
+                        <div class="form-group">
+                            <label class="form-label">What condition is it in?</label>
+                            <div class="options-grid">
+                                <div class="radio-card">
+                                    <input type="radio" name="condition" id="cond-good" value="good" checked>
+                                    <label for="cond-good" class="radio-card-label">
+                                        <span class="icon">✨</span>
+                                        <span class="title">Good / Intact</span>
+                                        <span class="desc">Ready to use</span>
+                                    </label>
+                                </div>
+                                <div class="radio-card">
+                                    <input type="radio" name="condition" id="cond-worn" value="worn">
+                                    <label for="cond-worn" class="radio-card-label">
+                                        <span class="icon">📦</span>
+                                        <span class="title">Lightly Worn</span>
+                                        <span class="desc">Minor scuffs/marks</span>
+                                    </label>
+                                </div>
+                                <div class="radio-card">
+                                    <input type="radio" name="condition" id="cond-damaged" value="damaged">
+                                    <label for="cond-damaged" class="radio-card-label">
+                                        <span class="icon">✂️</span>
+                                        <span class="title">Torn / Damaged</span>
+                                        <span class="desc">Needs trimming</span>
+                                    </label>
+                                </div>
+                                <div class="radio-card">
+                                    <input type="radio" name="condition" id="cond-scrap" value="scrap">
+                                    <label for="cond-scrap" class="radio-card-label">
+                                        <span class="icon">🧩</span>
+                                        <span class="title">Scrap Pieces</span>
+                                        <span class="desc">Raw fragments</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Category Preference -->
+                        <div class="form-group">
+                            <label class="form-label">What would you like to create?</label>
+                            <div class="options-grid">
+                                <div class="radio-card">
+                                    <input type="radio" name="category" id="cat-all" value="all" checked>
+                                    <label for="cat-all" class="radio-card-label">
+                                        <span class="icon">🌟</span>
+                                        <span class="title">All Categories</span>
+                                        <span class="desc">Best match</span>
+                                    </label>
+                                </div>
+                                <div class="radio-card">
+                                    <input type="radio" name="category" id="cat-practical" value="practical">
+                                    <label for="cat-practical" class="radio-card-label">
+                                        <span class="icon">🛠️</span>
+                                        <span class="title">Practical</span>
+                                        <span class="desc">Useful daily tools</span>
+                                    </label>
+                                </div>
+                                <div class="radio-card">
+                                    <input type="radio" name="category" id="cat-decorative" value="decorative">
+                                    <label for="cat-decorative" class="radio-card-label">
+                                        <span class="icon">🎨</span>
+                                        <span class="title">Decorative</span>
+                                        <span class="desc">Art &amp; home ambiance</span>
+                                    </label>
+                                </div>
+                                <div class="radio-card">
+                                    <input type="radio" name="category" id="cat-storage" value="storage">
+                                    <label for="cat-storage" class="radio-card-label">
+                                        <span class="icon">📦</span>
+                                        <span class="title">Storage</span>
+                                        <span class="desc">Organizers &amp; boxes</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Available Tools Checklist -->
+                        <div class="form-group">
+                            <label class="form-label">What tools do you have at home?</label>
+                            <div class="tools-grid">
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="Scissors" checked>
+                                    <span>✂️ Scissors</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="Craft Glue">
+                                    <span>🧴 Glue / Glue Gun</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="Needle &amp; Thread">
+                                    <span>🪡 Needle &amp; Thread</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="Screwdriver">
+                                    <span>🪛 Screwdriver / Hammer</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="Sandpaper">
+                                    <span>📜 Sandpaper</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="Paint">
+                                    <span>🖌️ Paint / Markers</span>
+                                </label>
+                                <label class="checkbox-chip">
+                                    <input type="checkbox" name="tools" value="none">
+                                    <span>🤲 Hands Only (No Tools)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Budget & Skill Level (2 Columns) -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+                            <div class="form-group">
+                                <label for="budget-select" class="form-label">Available Budget</label>
+                                <select id="budget-select" class="select-input">
+                                    <option value="zero" selected>₹0 (Free with existing supplies)</option>
+                                    <option value="under100">Under ₹100 (Minimal craft supplies)</option>
+                                    <option value="under500">Under ₹500 (Moderate supplies)</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="skill-select" class="form-label">Your DIY Skill Level</label>
+                                <select id="skill-select" class="select-input">
+                                    <option value="beginner" selected>Beginner (Simple &amp; Safe)</option>
+                                    <option value="intermediate">Intermediate (Comfortable with tools)</option>
+                                    <option value="advanced">Advanced (Experienced crafter)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span>✨</span> Find Creative Reuse Ideas
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Loading State Box -->
+                <div class="loading-box" id="loading-box" aria-live="polite">
+                    <div class="leaf-spinner">🌱</div>
+                    <div class="loading-text">Analyzing Upcycling Possibilities...</div>
+                    <div class="loading-subtext" id="loading-subtext">Evaluating material durability &amp; safety...</div>
+                </div>
+
+                <!-- Hazardous Safety Alert Box -->
+                <div class="hazard-alert-box" id="hazard-box" role="alert">
+                    <div class="hazard-header">
+                        <div class="hazard-icon">⚠️</div>
+                        <h3 class="hazard-title" id="hazard-title">Safety Advisory</h3>
+                    </div>
+                    <p class="hazard-reason" id="hazard-reason"></p>
+                    <div class="hazard-guidance" id="hazard-guidance"></div>
+                </div>
+            </div>
+
+            <!-- Suggestion Results Section -->
+            <section class="results-section" id="results-section" aria-live="polite">
+                <!-- Free Demo Engine Transparency Notice -->
+                <div class="demo-banner">
+                    <div class="demo-banner-icon">🌱</div>
+                    <div class="demo-banner-content">
+                        <h4>Demo Suggestion Engine — 100% Free &amp; Offline</h4>
+                        <p>These recommendations are generated using intelligent local client-side matching algorithms and safe, verified upcycling project recipes. No paid external AI API calls or server fees are incurred (₹0 cost).</p>
+                    </div>
+                </div>
+
+                <div class="results-header-bar">
+                    <h3>Suggested Upcycling Projects</h3>
+                    <button type="button" class="reset-btn" id="reset-btn">
+                        <span>🔄</span> Start Another Project
+                    </button>
+                </div>
+
+                <!-- Project Cards Container -->
+                <div id="projects-container"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Mission & Educational Section -->
+    <section class="mission-section" id="mission">
+        <div class="container">
+            <div class="section-heading-center">
+                <h2>Why Upcycling Matters</h2>
+                <p>Upcycling is the creative art of repurposing by-products, waste materials, and unwanted items into new products of higher quality or environmental value.</p>
+            </div>
+
+            <div class="mission-grid">
+                <article class="mission-card">
+                    <div class="mission-icon">🌍</div>
+                    <h3>Divert Waste from Landfills</h3>
+                    <p>Every bottle, glass jar, or pair of jeans reused directly prevents hundreds of grams of non-biodegradable waste from polluting local waterways and municipal dumps.</p>
+                </article>
+
+                <article class="mission-card">
+                    <div class="mission-icon">💰</div>
+                    <h3>Strict ₹0 Budget Philosophy</h3>
+                    <p>True sustainability should never be expensive. We prioritize projects that require zero purchase of new materials, relying strictly on common items already in your home.</p>
+                </article>
+
+                <article class="mission-card">
+                    <div class="mission-icon">🛡️</div>
+                    <h3>Safety-First Guidance</h3>
+                    <p>Creative reuse shouldn't be hazardous. SecondLife AI automatically detects hazardous items (like old batteries, CFL bulbs, and chemicals) and advises certified recycling instead.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>SecondLife AI</h4>
+                    <p>A zero-cost creative reuse platform empowering students, crafters, and households to live sustainably through thoughtful DIY upcycling.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Navigation</h5>
+                    <ul>
+                        <li><a href="#main-form-section">Suggest Ideas</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#main-form-section">Hazard Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Tech &amp; Hosting</h5>
+                    <ul>
+                        <li>Frontend: HTML5, CSS3, ES6 JavaScript</li>
+                        <li>Hosting: GitHub Pages (100% Free)</li>
+                        <li>Development Cost: ₹0</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© SecondLife AI — Open Source Sustainability Initiative</p>
+                <p>Designed for easy deployment on GitHub Pages • Free &amp; Offline</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts in proper dependency order -->
+    <script src="js/projects-data.js"></script>
+    <script src="js/suggestion-engine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
